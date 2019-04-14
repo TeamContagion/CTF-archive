@@ -1,0 +1,25 @@
+
+<html>
+	<head>
+		<script src="dist/bundle.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css"/>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<div class="main">
+			<h1>The .Wat ness</h1>
+			<div class="selection">
+				<button class="game-select" id="local">Play Local Game</button>
+				<button class="game-select" id="remote">Play Real Game</button>
+			</div>
+			<div class="flag gone">
+				<div class="header">Congratulations! The flag is </div><div class="flag-contents"></div>
+			</div>
+			<div class="failure gone">
+				<div class="header">Please consider practicing a bit more.</div>
+			</div>
+			<witness-game class="gone"></witness-game>
+		</div>
+	</body>
+</html>
