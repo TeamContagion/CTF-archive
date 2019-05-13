@@ -1,0 +1,5 @@
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/LCARS
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/crypto.sys
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/echo.sys
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/init.sys
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/dfc95bcc48e45c85295466b0fdd98bf76903dcb74c3663652b9254ca2897eb70/loader.sys

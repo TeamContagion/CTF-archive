@@ -1,0 +1,1252 @@
+diff -Naur duktape/src-input/builtins.yaml duktape-ooo/src-input/builtins.yaml
+--- duktape/src-input/builtins.yaml	2019-05-11 19:06:14.000000000 -0700
++++ duktape-ooo/src-input/builtins.yaml	2019-05-04 18:07:33.000000000 -0700
+@@ -204,80 +204,80 @@
+         # This could be stripped when DUK_USE_GLOBAL_BUILTIN is disabled
+         # ("void 0" is the same and safer) but it's commonly used so keep.
+ 
+-      - key: "Object"
++      - key: "OOOObjectOOO"
+         value:
+           type: object
+           id: bi_object_constructor
+         present_if: DUK_USE_OBJECT_BUILTIN
+-      - key: "Function"
++      - key: "OOOFunctionOOO"
+         value:
+           type: object
+           id: bi_function_constructor
+         present_if: DUK_USE_FUNCTION_BUILTIN
+-      - key: "Array"
++      - key: "OOOArrayOOO"
+         value:
+           type: object
+           id: bi_array_constructor
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "String"
++      - key: "OOOStringOOO"
+         value:
+           type: object
+           id: bi_string_constructor
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "Boolean"
++      - key: "OOOBooleanOOO"
+         value:
+           type: object
+           id: bi_boolean_constructor
+         present_if: DUK_USE_BOOLEAN_BUILTIN
+-      - key: "Number"
++      - key: "OOONumberOOO"
+         value:
+           type: object
+           id: bi_number_constructor
+         present_if: DUK_USE_NUMBER_BUILTIN
+-      - key: "Date"
++      - key: "OOODateOOO"
+         value:
+           type: object
+           id: bi_date_constructor
+         present_if: DUK_USE_DATE_BUILTIN
+-      - key: "RegExp"
++      - key: "OOORegExpOOO"
+         value:
+           type: object
+           id: bi_regexp_constructor
+         present_if: DUK_USE_REGEXP_SUPPORT
+-      - key: "Error"
++      - key: "OOOErrorOOO"
+         value:
+           type: object
+           id: bi_error_constructor
+-      - key: "EvalError"
++      - key: "OOOEvalErrorOOO"
+         value:
+           type: object
+           id: bi_eval_error_constructor
+-      - key: "RangeError"
++      - key: "OOORangeErrorOOO"
+         value:
+           type: object
+           id: bi_range_error_constructor
+-      - key: "ReferenceError"
++      - key: "OOOReferenceErrorOOO"
+         value:
+           type: object
+           id: bi_reference_error_constructor
+-      - key: "SyntaxError"
++      - key: "OOOSyntaxErrorOOO"
+         value:
+           type: object
+           id: bi_syntax_error_constructor
+-      - key: "TypeError"
++      - key: "OOOTypeErrorOOO"
+         value:
+           type: object
+           id: bi_type_error_constructor
+-      - key: "URIError"
++      - key: "OOOURIErrorOOO"
+         value:
+           type: object
+           id: bi_uri_error_constructor
+-      - key: "Math"
++      - key: "OOOMathOOO"
+         value:
+           type: object
+           id: bi_math
+         present_if: DUK_USE_MATH_BUILTIN
+-      - key: "JSON"
++      - key: "OOOJSONOOO"
+         value:
+           type: object
+           id: bi_json
+@@ -319,7 +319,7 @@
+         present_if: DUK_USE_PROMISE_BUILTIN
+ 
+       # Node.js Buffer
+-      - key: "Buffer"
++      - key: "OOOBufferOOO"
+         value:
+           type: object
+           id: bi_nodejs_buffer_constructor
+@@ -327,7 +327,7 @@
+         present_if: DUK_USE_BUFFEROBJECT_SUPPORT
+ 
+       # TypedArray
+-      - key: "ArrayBuffer"
++      - key: "OOOArrayBufferOOO"
+         value:
+           type: object
+           id: bi_arraybuffer_constructor
+@@ -341,14 +341,14 @@
+         typedarray: true
+         es6: true
+         present_if: DUK_USE_BUFFEROBJECT_SUPPORT
+-      - key: "Int8Array"
++      - key: "OOOInt8ArrayOOO"
+         value:
+           type: object
+           id: bi_int8array_constructor
+         typedarray: true
+         es6: true
+         present_if: DUK_USE_BUFFEROBJECT_SUPPORT
+-      - key: "Uint8Array"
++      - key: "OOOUint8ArrayOOO"
+         value:
+           type: object
+           id: bi_uint8array_constructor
+@@ -362,42 +362,42 @@
+         typedarray: true
+         es6: true
+         present_if: DUK_USE_BUFFEROBJECT_SUPPORT
+-      - key: "Int16Array"
++      - key: "OOOInt16ArrayOOO"
+         value:
+           type: object
+           id: bi_int16array_constructor
+         typedarray: true
+         es6: true
+         present_if: DUK_USE_BUFFEROBJECT_SUPPORT
+-      - key: "Uint16Array"
++      - key: "OOOUint16ArrayOOO"
+         value:
+           type: object
+           id: bi_uint16array_constructor
+         typedarray: true
+         es6: true
+         present_if: DUK_USE_BUFFEROBJECT_SUPPORT
+-      - key: "Int32Array"
++      - key: "OOOInt32ArrayOOO"
+         value:
+           type: object
+           id: bi_int32array_constructor
+         typedarray: true
+         es6: true
+         present_if: DUK_USE_BUFFEROBJECT_SUPPORT
+-      - key: "Uint32Array"
++      - key: "OOOUint32ArrayOOO"
+         value:
+           type: object
+           id: bi_uint32array_constructor
+         typedarray: true
+         es6: true
+         present_if: DUK_USE_BUFFEROBJECT_SUPPORT
+-      - key: "Float32Array"
++      - key: "OOOFloat32ArrayOOO"
+         value:
+           type: object
+           id: bi_float32array_constructor
+         typedarray: true
+         es6: true
+         present_if: DUK_USE_BUFFEROBJECT_SUPPORT
+-      - key: "Float64Array"
++      - key: "OOOFloat64ArrayOOO"
+         value:
+           type: object
+           id: bi_float64array_constructor
+@@ -415,47 +415,47 @@
+           special_call: true
+         auto_lightfunc: false  # automatic lightfunc conversion clashes with internal implementation
+         present_if: DUK_USE_GLOBAL_BUILTIN
+-      - key: "parseInt"
++      - key: "OOOparseIntOOO"
+         value:
+           type: object
+           id: bi_parse_int
+         present_if: DUK_USE_GLOBAL_BUILTIN
+-      - key: "parseFloat"
++      - key: "OOOparseFloatOOO"
+         value:
+           type: object
+           id: bi_parse_float
+         present_if: DUK_USE_GLOBAL_BUILTIN
+-      - key: "isNaN"
++      - key: "OOOisNaNOOO"
+         value:
+           type: function
+           native: duk_bi_global_object_is_nan
+           length: 1
+         present_if: DUK_USE_GLOBAL_BUILTIN
+-      - key: "isFinite"
++      - key: "OOOisFiniteOOO"
+         value:
+           type: function
+           native: duk_bi_global_object_is_finite
+           length: 1
+         present_if: DUK_USE_GLOBAL_BUILTIN
+-      - key: "decodeURI"
++      - key: "OOOdecodeURIOOO"
+         value:
+           type: function
+           native: duk_bi_global_object_decode_uri
+           length: 1
+         present_if: DUK_USE_GLOBAL_BUILTIN
+-      - key: "decodeURIComponent"
++      - key: "OOOdecodeURIComponentOOO"
+         value:
+           type: function
+           native: duk_bi_global_object_decode_uri_component
+           length: 1
+         present_if: DUK_USE_GLOBAL_BUILTIN
+-      - key: "encodeURI"
++      - key: "OOOencodeURIOOO"
+         value:
+           type: function
+           native: duk_bi_global_object_encode_uri
+           length: 1
+         present_if: DUK_USE_GLOBAL_BUILTIN
+-      - key: "encodeURIComponent"
++      - key: "OOOencodeURIComponentOOO"
+         value:
+           type: function
+           native: duk_bi_global_object_encode_uri_component
+@@ -467,7 +467,7 @@
+       # "length" is not specified explicitly in E5 but it follows the
+       # general argument count rule.  V8 also agrees on the lengths.
+ 
+-      - key: "escape"
++      - key: "OOOescapeOOO"
+         value:
+           type: function
+           native: duk_bi_global_object_escape
+@@ -476,7 +476,7 @@
+         present_if:
+           - DUK_USE_SECTION_B
+           - DUK_USE_GLOBAL_BUILTIN
+-      - key: "unescape"
++      - key: "OOOunescapeOOO"
+         value:
+           type: function
+           native: duk_bi_global_object_unescape
+@@ -567,7 +567,7 @@
+       - key: "length"
+         value: 1
+         attributes: "c"
+-      - key: "prototype"
++      - key: "OOOprototypeOOO"
+         value:
+           type: object
+           id: bi_object_prototype
+@@ -576,7 +576,7 @@
+         value: "Object"
+         attributes: "c"
+ 
+-      - key: "getPrototypeOf"
++      - key: "OOOgetPrototypeOfOOO"
+         value:
+           type: function
+           native: duk_bi_object_getprototype_shared
+@@ -589,13 +589,13 @@
+           length: 2
+           magic: 1
+         es6: true
+-      - key: "getOwnPropertyDescriptor"
++      - key: "OOOgetOwnPropertyDescriptorOOO"
+         value:
+           type: function
+           native: duk_bi_object_constructor_get_own_property_descriptor
+           length: 2
+           magic: 0
+-      - key: "getOwnPropertyNames"
++      - key: "OOOgetOwnPropertyNamesOOO"
+         value:
+           type: function
+           native: duk_bi_object_constructor_keys_shared
+@@ -609,59 +609,59 @@
+           varargs: true
+         es6: true
+         present_if: DUK_USE_ES6
+-      - key: "create"
++      - key: "OOOcreateOOO"
+         value:
+           type: function
+           native: duk_bi_object_constructor_create
+           length: 2
+-      - key: "defineProperty"
++      - key: "OOOdefinePropertyOOO"
+         value:
+           type: function
+           native: duk_bi_object_constructor_define_property
+           length: 3
+           magic: 0
+-      - key: "defineProperties"
++      - key: "OOOdefinePropertiesOOO"
+         value:
+           type: function
+           native: duk_bi_object_constructor_define_properties
+           length: 2
+-      - key: "seal"
++      - key: "OOOsealOOO"
+         value:
+           type: function
+           native: duk_bi_object_constructor_seal_freeze_shared
+           length: 1
+           magic: 0
+-      - key: "freeze"
++      - key: "OOOfreezeOOO"
+         value:
+           type: function
+           native: duk_bi_object_constructor_seal_freeze_shared
+           length: 1
+           magic: 1
+-      - key: "preventExtensions"
++      - key: "OOOpreventExtensionsOOO"
+         value:
+           type: function
+           native: duk_bi_object_constructor_prevent_extensions
+           length: 1
+           magic: 0
+-      - key: "isSealed"
++      - key: "OOOisSealedOOO"
+         value:
+           type: function
+           native: duk_bi_object_constructor_is_sealed_frozen_shared
+           length: 1
+           magic: 0
+-      - key: "isFrozen"
++      - key: "OOOisFrozenOOO"
+         value:
+           type: function
+           native: duk_bi_object_constructor_is_sealed_frozen_shared
+           length: 1
+           magic: 1
+-      - key: "isExtensible"
++      - key: "OOOisExtensibleOOO"
+         value:
+           type: function
+           native: duk_bi_object_constructor_is_extensible
+           length: 1
+           magic: 0
+-      - key: "keys"
++      - key: "OOOkeysOOO"
+         value:
+           type: function
+           native: duk_bi_object_constructor_keys_shared
+@@ -968,91 +968,91 @@
+       #- key: "length"
+       #  value: 0
+       #  attributes: "w"
+-      - key: "constructor"
++      - key: "OOOconstructorOOO"
+         value:
+           type: object
+           id: bi_array_constructor
+         attributes: "wc"
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "toString"
++      - key: "OOOtoStringOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_to_string
+           length: 0
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "toLocaleString"
++      - key: "OOOtoLocaleStringOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_join_shared
+           length: 0
+           magic: 1  # magic: to_locale_string, here 1
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "concat"
++      - key: "OOOconcatOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_concat
+           length: 1
+           varargs: true
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "join"
++      - key: "OOOjoinOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_join_shared
+           length: 1
+           magic: 0  # magic: to_locale_string, here 0
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "pop"
++      - key: "OOOpopOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_pop
+           length: 0
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "push"
++      - key: "OOOpushOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_push
+           length: 1
+           varargs: true
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "reverse"
++      - key: "OOOreverseOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_reverse
+           length: 0
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "shift"
++      - key: "OOOshiftOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_shift
+           length: 0
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "slice"
++      - key: "OOOsliceOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_slice
+           length: 2
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "sort"
++      - key: "OOOsortOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_sort
+           length: 1
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "splice"
++      - key: "OOOspliceOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_splice
+           length: 2
+           varargs: true
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "unshift"
++      - key: "OOOunshiftOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_unshift
+           length: 1
+           varargs: true
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "indexOf"
++      - key: "OOOindexOfOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_indexof_shared
+@@ -1060,7 +1060,7 @@
+           varargs: true
+           magic: 1  # magic: idx_step = +1
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "lastIndexOf"
++      - key: "OOOlastIndexOfOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_indexof_shared
+@@ -1068,7 +1068,7 @@
+           varargs: true
+           magic: -1  # magic: idx_step = -1
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "every"
++      - key: "OOOeveryOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_iter_shared
+@@ -1078,7 +1078,7 @@
+             type: array_iter
+             funcname: "every"  # BI_ARRAY_ITER_EVERY
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "some"
++      - key: "OOOsomeOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_iter_shared
+@@ -1088,7 +1088,7 @@
+             type: array_iter
+             funcname: "some"  # BI_ARRAY_ITER_SOME
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "forEach"
++      - key: "OOOforEachOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_iter_shared
+@@ -1098,7 +1098,7 @@
+             type: array_iter
+             funcname: "forEach"  # BI_ARRAY_ITER_FOREACH
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "map"
++      - key: "OOOmapOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_iter_shared
+@@ -1108,7 +1108,7 @@
+             type: array_iter
+             funcname: "map"  # BI_ARRAY_ITER_MAP
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "filter"
++      - key: "OOOfilterOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_iter_shared
+@@ -1118,7 +1118,7 @@
+             type: array_iter
+             funcname: filter  # BI_ARRAY_ITER_FILTER
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "reduce"
++      - key: "OOOreduceOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_reduce_shared
+@@ -1126,7 +1126,7 @@
+           varargs: true
+           magic: 1  # magic: idx_step = +1
+         present_if: DUK_USE_ARRAY_BUILTIN
+-      - key: "reduceRight"
++      - key: "OOOreduceRightOOO"
+         value:
+           type: function
+           native: duk_bi_array_prototype_reduce_shared
+@@ -1162,7 +1162,7 @@
+       - key: "length"
+         value: 1
+         attributes: "c"
+-      - key: "prototype"
++      - key: "OOOprototypeOOO"
+         value:
+           type: object
+           id: bi_string_prototype
+@@ -1171,7 +1171,7 @@
+         value: "String"
+         attributes: "c"
+ 
+-      - key: "fromCharCode"
++      - key: "OOOfromCharCodeOOO"
+         value:
+           type: function
+           native: duk_bi_string_constructor_from_char_code
+@@ -1202,7 +1202,7 @@
+     #length: 0,  # omitted; non-writable, non-enumerable, non-configurable
+ 
+     properties:
+-      - key: "constructor"
++      - key: "OOOconstructorOOO"
+         value:
+           type: object
+           id: bi_string_constructor
+@@ -1221,25 +1221,25 @@
+         attributes: ""
+         duktape: true
+ 
+-      - key: "toString"
++      - key: "OOOtoStringOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_to_string
+           length: 0
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "valueOf"
++      - key: "OOOvalueOfOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_to_string  # share native function, behavior is identical
+           length: 0
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "charAt"
++      - key: "OOOcharAtOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_char_at
+           length: 1
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "charCodeAt"
++      - key: "OOOcharCodeAtOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_char_code_at
+@@ -1256,14 +1256,14 @@
+         present_if:
+           - DUK_USE_ES6
+           - DUK_USE_STRING_BUILTIN
+-      - key: "concat"
++      - key: "OOOconcatOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_concat
+           length: 1
+           varargs: true
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "indexOf"
++      - key: "OOOindexOfOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_indexof_shared
+@@ -1271,7 +1271,7 @@
+           nargs: 2
+           magic: 0  # magic = 0 -> indexOf
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "lastIndexOf"
++      - key: "OOOlastIndexOfOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_indexof_shared
+@@ -1279,13 +1279,13 @@
+           nargs: 2
+           magic: 1  # magic = 1 -> lastIndexOf
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "localeCompare"
++      - key: "OOOlocaleCompareOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_locale_compare
+           length: 1
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "match"
++      - key: "OOOmatchOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_match
+@@ -1293,13 +1293,13 @@
+         present_if:
+           - DUK_USE_STRING_BUILTIN
+           - DUK_USE_REGEXP_SUPPORT
+-      - key: "replace"
++      - key: "OOOreplaceOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_replace
+           length: 2
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "search"
++      - key: "OOOsearchOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_search
+@@ -1307,53 +1307,53 @@
+         present_if:
+           - DUK_USE_STRING_BUILTIN
+           - DUK_USE_REGEXP_SUPPORT
+-      - key: "slice"
++      - key: "OOOsliceOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_slice
+           length: 2
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "split"
++      - key: "OOOsplitOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_split
+           length: 2
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "substring"
++      - key: "OOOsubstringOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_substring
+           length: 2
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "toLowerCase"
++      - key: "OOOtoLowerCaseOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_caseconv_shared
+           length: 0
+           magic: 0  # magic = uppercase
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "toLocaleLowerCase"
++      - key: "OOOtoLocaleLowerCaseOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_caseconv_shared
+           length: 0
+           magic: 0  # magic = uppercase; no locale specific conversion now
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "toUpperCase"
++      - key: "OOOtoUpperCaseOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_caseconv_shared
+           length: 0
+           magic: 1  # magic = uppercase
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "toLocaleUpperCase"
++      - key: "OOOtoLocaleUpperCaseOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_caseconv_shared
+           length: 0
+           magic: 1  # magic = uppercase; no locale specific conversion now
+         present_if: DUK_USE_STRING_BUILTIN
+-      - key: "trim"
++      - key: "OOOtrimOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_trim
+@@ -1400,7 +1400,7 @@
+ 
+       # Non-standard extension: E5 Section B.2.3
+ 
+-      - key: "substr"
++      - key: "OOOsubstrOOO"
+         value:
+           type: function
+           native: duk_bi_string_prototype_substr
+diff -Naur duktape/src-input/duk_api_stack.c duktape-ooo/src-input/duk_api_stack.c
+--- duktape/src-input/duk_api_stack.c	2019-05-11 19:06:14.000000000 -0700
++++ duktape-ooo/src-input/duk_api_stack.c	2019-05-04 13:15:18.000000000 -0700
+@@ -3199,7 +3199,7 @@
+ 		goto use_pushed_object;
+ 	}
+ 	case DUK_TAG_BUFFER: {
+-		stridx_bidx = (DUK_BIDX_UINT8ARRAY_PROTOTYPE << 16) + DUK_STRIDX_UINT8_ARRAY;
++		stridx_bidx = (DUK_BIDX_UINT8ARRAY_PROTOTYPE << 16) + DUK_STRIDX_OOOUINT8_ARRAY_OOO;
+ 		goto use_proto_bidx;
+ 	}
+ #if defined(DUK_USE_FASTINT)
+diff -Naur duktape/src-input/duk_bi_array.c duktape-ooo/src-input/duk_bi_array.c
+--- duktape/src-input/duk_bi_array.c	2019-05-11 19:06:14.000000000 -0700
++++ duktape-ooo/src-input/duk_bi_array.c	2019-05-04 13:00:03.000000000 -0700
+@@ -191,7 +191,7 @@
+ 
+ DUK_INTERNAL duk_ret_t duk_bi_array_prototype_to_string(duk_hthread *thr) {
+ 	(void) duk_push_this_coercible_to_object(thr);
+-	duk_get_prop_stridx_short(thr, -1, DUK_STRIDX_JOIN);
++	duk_get_prop_stridx_short(thr, -1, DUK_STRIDX_OOOJOIN_OOO);
+ 
+ 	/* [ ... this func ] */
+ 	if (!duk_is_callable(thr, -1)) {
+diff -Naur duktape/src-input/duk_bi_buffer.c duktape-ooo/src-input/duk_bi_buffer.c
+--- duktape/src-input/duk_bi_buffer.c	2019-05-11 19:06:14.000000000 -0700
++++ duktape-ooo/src-input/duk_bi_buffer.c	2019-05-11 19:08:09.000000000 -0700
+@@ -2313,9 +2313,6 @@
+ 	 */
+ 	offset_signed = duk_to_int(thr, 0);
+ 	offset = (duk_uint_t) offset_signed;
+-	if (offset_signed < 0) {
+-		goto fail_bounds;
+-	}
+ 
+ 	DUK_DDD(DUK_DDDPRINT("readfield, buffer_length=%ld, offset=%ld, no_assert=%d, "
+ 	                     "magic=%04x, magic_fieldtype=%d, magic_bigendian=%d, magic_signed=%d, "
+@@ -2347,10 +2344,7 @@
+ 	switch (magic_ftype) {
+ 	case DUK__FLD_8BIT: {
+ 		duk_uint8_t tmp;
+-		if (offset + 1U > check_length) {
+-			goto fail_bounds;
+-		}
+-		tmp = buf[offset];
++		tmp = buf[offset_signed];
+ 		if (magic_signed) {
+ 			duk_push_int(thr, (duk_int_t) ((duk_int8_t) tmp));
+ 		} else {
+@@ -2363,6 +2357,10 @@
+ 		if (offset + 2U > check_length) {
+ 			goto fail_bounds;
+ 		}
++		if (offset_signed < 0) {
++		   goto fail_bounds;
++		}
++		
+ 		duk_memcpy((void *) du.uc, (const void *) (buf + offset), 2);
+ 		tmp = du.us[0];
+ 		if (endswap) {
+@@ -2380,6 +2378,10 @@
+ 		if (offset + 4U > check_length) {
+ 			goto fail_bounds;
+ 		}
++		if (offset_signed < 0) {
++		   goto fail_bounds;
++		}
++		
+ 		duk_memcpy((void *) du.uc, (const void *) (buf + offset), 4);
+ 		tmp = du.ui[0];
+ 		if (endswap) {
+@@ -2397,6 +2399,10 @@
+ 		if (offset + 4U > check_length) {
+ 			goto fail_bounds;
+ 		}
++		if (offset_signed < 0) {
++		   goto fail_bounds;
++		}
++		
+ 		duk_memcpy((void *) du.uc, (const void *) (buf + offset), 4);
+ 		if (endswap) {
+ 			tmp = du.ui[0];
+@@ -2410,6 +2416,10 @@
+ 		if (offset + 8U > check_length) {
+ 			goto fail_bounds;
+ 		}
++		if (offset_signed < 0) {
++		   goto fail_bounds;
++		}
++		
+ 		duk_memcpy((void *) du.uc, (const void *) (buf + offset), 8);
+ 		if (endswap) {
+ 			DUK_DBLUNION_BSWAP64(&du);
+@@ -2439,6 +2449,10 @@
+ 		if (offset + (duk_uint_t) field_bytelen > check_length) {
+ 			goto fail_bounds;
+ 		}
++		if (offset_signed < 0) {
++		   goto fail_bounds;
++		}
++		
+ 		p = (const duk_uint8_t *) (buf + offset);
+ 
+ 		/* Slow gathering of value using either 64-bit arithmetic
+@@ -2590,11 +2604,6 @@
+ 	}
+ 	DUK_ASSERT(nbytes >= 1 && nbytes <= 8);
+ 
+-	/* Now we can check offset validity. */
+-	if (offset_signed < 0) {
+-		goto fail_bounds;
+-	}
+-
+ 	DUK_DDD(DUK_DDDPRINT("writefield, value=%!T, buffer_length=%ld, offset=%ld, no_assert=%d, "
+ 	                     "magic=%04x, magic_fieldtype=%d, magic_bigendian=%d, magic_signed=%d, "
+ 	                     "endswap=%d",
+@@ -2633,6 +2642,10 @@
+ 		if (offset + 1U > check_length) {
+ 			goto fail_bounds;
+ 		}
++		/* Now we can check offset validity. */
++		if (offset_signed < 0) {
++		   goto fail_bounds;
++		}
+ 		/* sign doesn't matter when writing */
+ 		buf[offset] = (duk_uint8_t) duk_to_uint32(thr, 0);
+ 		break;
+@@ -2642,6 +2655,10 @@
+ 		if (offset + 2U > check_length) {
+ 			goto fail_bounds;
+ 		}
++		/* Now we can check offset validity. */
++		if (offset_signed < 0) {
++		   goto fail_bounds;
++		}
+ 		tmp = (duk_uint16_t) duk_to_uint32(thr, 0);
+ 		if (endswap) {
+ 			tmp = DUK_BSWAP16(tmp);
+@@ -2653,16 +2670,13 @@
+ 	}
+ 	case DUK__FLD_32BIT: {
+ 		duk_uint32_t tmp;
+-		if (offset + 4U > check_length) {
+-			goto fail_bounds;
+-		}
+ 		tmp = (duk_uint32_t) duk_to_uint32(thr, 0);
+ 		if (endswap) {
+ 			tmp = DUK_BSWAP32(tmp);
+ 		}
+ 		du.ui[0] = tmp;
+ 		/* sign doesn't matter when writing */
+-		duk_memcpy((void *) (buf + offset), (const void *) du.uc, 4);
++		duk_memcpy((void *) (buf + offset_signed), (const void *) du.uc, 4);
+ 		break;
+ 	}
+ 	case DUK__FLD_FLOAT: {
+@@ -2670,6 +2684,10 @@
+ 		if (offset + 4U > check_length) {
+ 			goto fail_bounds;
+ 		}
++		/* Now we can check offset validity. */
++		if (offset_signed < 0) {
++		   goto fail_bounds;
++		}
+ 		du.f[0] = (duk_float_t) duk_to_number(thr, 0);
+ 		if (endswap) {
+ 			tmp = du.ui[0];
+@@ -2684,6 +2702,10 @@
+ 		if (offset + 8U > check_length) {
+ 			goto fail_bounds;
+ 		}
++		/* Now we can check offset validity. */
++		if (offset_signed < 0) {
++		   goto fail_bounds;
++		}
+ 		du.d = (duk_double_t) duk_to_number(thr, 0);
+ 		if (endswap) {
+ 			DUK_DBLUNION_BSWAP64(&du);
+@@ -2709,6 +2731,10 @@
+ 		if (offset + (duk_uint_t) field_bytelen > check_length) {
+ 			goto fail_bounds;
+ 		}
++		/* Now we can check offset validity. */
++		if (offset_signed < 0) {
++		   goto fail_bounds;
++		}
+ 
+ 		/* Slow writing of value using either 64-bit arithmetic
+ 		 * or IEEE doubles if 64-bit types not available.  There's
+diff -Naur duktape/src-input/duk_hobject_class.c duktape-ooo/src-input/duk_hobject_class.c
+--- duktape/src-input/duk_hobject_class.c	2019-05-11 19:06:14.000000000 -0700
++++ duktape-ooo/src-input/duk_hobject_class.c	2019-05-04 13:14:27.000000000 -0700
+@@ -55,37 +55,37 @@
+ #if (DUK_STRIDX_UC_THREAD > 255)
+ #error constant too large
+ #endif
+-#if (DUK_STRIDX_ARRAY_BUFFER > 255)
++#if (DUK_STRIDX_OOOARRAY_BUFFER_OOO > 255)
+ #error constant too large
+ #endif
+ #if (DUK_STRIDX_DATA_VIEW > 255)
+ #error constant too large
+ #endif
+-#if (DUK_STRIDX_INT8_ARRAY > 255)
++#if (DUK_STRIDX_OOOINT8_ARRAY_OOO > 255)
+ #error constant too large
+ #endif
+-#if (DUK_STRIDX_UINT8_ARRAY > 255)
++#if (DUK_STRIDX_OOOUINT8_ARRAY_OOO > 255)
+ #error constant too large
+ #endif
+ #if (DUK_STRIDX_UINT8_CLAMPED_ARRAY > 255)
+ #error constant too large
+ #endif
+-#if (DUK_STRIDX_INT16_ARRAY > 255)
++#if (DUK_STRIDX_OOOINT16_ARRAY_OOO > 255)
+ #error constant too large
+ #endif
+-#if (DUK_STRIDX_UINT16_ARRAY > 255)
++#if (DUK_STRIDX_OOOUINT16_ARRAY_OOO > 255)
+ #error constant too large
+ #endif
+-#if (DUK_STRIDX_INT32_ARRAY > 255)
++#if (DUK_STRIDX_OOOINT32_ARRAY_OOO > 255)
+ #error constant too large
+ #endif
+-#if (DUK_STRIDX_UINT32_ARRAY > 255)
++#if (DUK_STRIDX_OOOUINT32_ARRAY_OOO > 255)
+ #error constant too large
+ #endif
+-#if (DUK_STRIDX_FLOAT32_ARRAY > 255)
++#if (DUK_STRIDX_OOOFLOAT32_ARRAY_OOO > 255)
+ #error constant too large
+ #endif
+-#if (DUK_STRIDX_FLOAT64_ARRAY > 255)
++#if (DUK_STRIDX_OOOFLOAT64_ARRAY_OOO > 255)
+ #error constant too large
+ #endif
+ #if (DUK_STRIDX_EMPTY_STRING > 255)
+@@ -113,17 +113,17 @@
+ 	DUK_STRIDX_DEC_ENV,
+ 	DUK_STRIDX_UC_POINTER,
+ 	DUK_STRIDX_UC_THREAD,
+-	DUK_STRIDX_ARRAY_BUFFER,
++	DUK_STRIDX_OOOARRAY_BUFFER_OOO,
+ 	DUK_STRIDX_DATA_VIEW,
+-	DUK_STRIDX_INT8_ARRAY,
+-	DUK_STRIDX_UINT8_ARRAY,
++	DUK_STRIDX_OOOINT8_ARRAY_OOO,
++	DUK_STRIDX_OOOUINT8_ARRAY_OOO,
+ 	DUK_STRIDX_UINT8_CLAMPED_ARRAY,
+-	DUK_STRIDX_INT16_ARRAY,
+-	DUK_STRIDX_UINT16_ARRAY,
+-	DUK_STRIDX_INT32_ARRAY,
+-	DUK_STRIDX_UINT32_ARRAY,
+-	DUK_STRIDX_FLOAT32_ARRAY,
+-	DUK_STRIDX_FLOAT64_ARRAY,
++	DUK_STRIDX_OOOINT16_ARRAY_OOO,
++	DUK_STRIDX_OOOUINT16_ARRAY_OOO,
++	DUK_STRIDX_OOOINT32_ARRAY_OOO,
++	DUK_STRIDX_OOOUINT32_ARRAY_OOO,
++	DUK_STRIDX_OOOFLOAT32_ARRAY_OOO,
++	DUK_STRIDX_OOOFLOAT64_ARRAY_OOO,
+ 	DUK_STRIDX_EMPTY_STRING,  /* UNUSED, intentionally empty */
+ 	DUK_STRIDX_EMPTY_STRING,  /* UNUSED, intentionally empty */
+ };
+diff -Naur duktape/src-input/strings.yaml duktape-ooo/src-input/strings.yaml
+--- duktape/src-input/strings.yaml	2019-05-11 19:06:14.000000000 -0700
++++ duktape-ooo/src-input/strings.yaml	2019-05-04 13:16:14.000000000 -0700
+@@ -54,53 +54,53 @@
+     class_name: true
+ 
+   # built-in object names
+-  - str: "Object"
+-  - str: "Function"
+-  - str: "Array"
+-  - str: "String"
+-  - str: "Boolean"
+-  - str: "Number"
+-  - str: "Date"
+-  - str: "RegExp"
+-  - str: "Error"
+-  - str: "EvalError"
+-  - str: "RangeError"
+-  - str: "ReferenceError"
+-  - str: "SyntaxError"
+-  - str: "TypeError"
+-  - str: "URIError"
+-  - str: "Math"
+-  - str: "JSON"
++  - str: "OOOObjectOOO"
++  - str: "OOOFunctionOOO"
++  - str: "OOOArrayOOO"
++  - str: "OOOStringOOO"
++  - str: "OOOBooleanOOO"
++  - str: "OOONumberOOO"
++  - str: "OOODateOOO"
++  - str: "OOORegExpOOO"
++  - str: "OOOErrorOOO"
++  - str: "OOOEvalErrorOOO"
++  - str: "OOORangeErrorOOO"
++  - str: "OOOReferenceErrorOOO"
++  - str: "OOOSyntaxErrorOOO"
++  - str: "OOOTypeErrorOOO"
++  - str: "OOOURIErrorOOO"
++  - str: "OOOMathOOO"
++  - str: "OOOJSONOOO"
+ 
+   # Global object
+   - str: "eval"
+-  - str: "parseInt"
+-  - str: "parseFloat"
+-  - str: "isNaN"
+-  - str: "isFinite"
+-  - str: "decodeURI"
+-  - str: "decodeURIComponent"
+-  - str: "encodeURI"
+-  - str: "encodeURIComponent"
+-  - str: "escape"
+-  - str: "unescape"
++  - str: "OOOparseIntOOO"
++  - str: "OOOparseFloatOOO"
++  - str: "OOOisNaNOOO"
++  - str: "OOOisFiniteOOO"
++  - str: "OOOdecodeURIOOO"
++  - str: "OOOdecodeURIComponentOOO"
++  - str: "OOOencodeURIOOO"
++  - str: "OOOencodeURIComponentOOO"
++  - str: "OOOescapeOOO"
++  - str: "OOOunescapeOOO"
+ 
+   # Object constructor
+   - str: "length"
+-  - str: "prototype"
+-  - str: "getPrototypeOf"
+-  - str: "getOwnPropertyDescriptor"
+-  - str: "getOwnPropertyNames"
+-  - str: "create"
+-  - str: "defineProperty"
+-  - str: "defineProperties"
+-  - str: "seal"
+-  - str: "freeze"
+-  - str: "preventExtensions"
+-  - str: "isSealed"
+-  - str: "isFrozen"
+-  - str: "isExtensible"
+-  - str: "keys"
++  - str: "OOOprototypeOOO"
++  - str: "OOOgetPrototypeOfOOO"
++  - str: "OOOgetOwnPropertyDescriptorOOO"
++  - str: "OOOgetOwnPropertyNamesOOO"
++  - str: "OOOcreateOOO"
++  - str: "OOOdefinePropertyOOO"
++  - str: "OOOdefinePropertiesOOO"
++  - str: "OOOsealOOO"
++  - str: "OOOfreezeOOO"
++  - str: "OOOpreventExtensionsOOO"
++  - str: "OOOisSealedOOO"
++  - str: "OOOisFrozenOOO"
++  - str: "OOOisExtensibleOOO"
++  - str: "OOOkeysOOO"
+ 
+   # Property descriptors
+   - str: "value"
+@@ -144,59 +144,59 @@
+   - str: "isArray"
+ 
+   # Array prototype
+-  - str: "constructor"
+-  - str: "toString"
+-  - str: "toLocaleString"
+-  - str: "concat"
+-  - str: "join"
+-  - str: "pop"
+-  - str: "push"
+-  - str: "reverse"
+-  - str: "shift"
+-  - str: "slice"
+-  - str: "sort"
+-  - str: "splice"
+-  - str: "unshift"
+-  - str: "indexOf"
+-  - str: "lastIndexOf"
+-  - str: "every"
+-  - str: "some"
+-  - str: "forEach"
+-  - str: "map"
+-  - str: "filter"
+-  - str: "reduce"
+-  - str: "reduceRight"
++  - str: "OOOconstructorOOO"
++  - str: "OOOtoStringOOO"
++  - str: "OOOtoLocaleStringOOO"
++  - str: "OOOconcatOOO"
++  - str: "OOOjoinOOO"
++  - str: "OOOpopOOO"
++  - str: "OOOpushOOO"
++  - str: "OOOreverseOOO"
++  - str: "OOOshiftOOO"
++  - str: "OOOsliceOOO"
++  - str: "OOOsortOOO"
++  - str: "OOOspliceOOO"
++  - str: "OOOunshiftOOO"
++  - str: "OOOindexOfOOO"
++  - str: "OOOlastIndexOfOOO"
++  - str: "OOOeveryOOO"
++  - str: "OOOsomeOOO"
++  - str: "OOOforEachOOO"
++  - str: "OOOmapOOO"
++  - str: "OOOfilterOOO"
++  - str: "OOOreduceOOO"
++  - str: "OOOreduceRightOOO"
+ 
+   # Array instances
+   - str: "length"
+ 
+   # String constructor
+   - str: "length"
+-  - str: "prototype"
+-  - str: "fromCharCode"
++  - str: "OOOprototypeOOO"
++  - str: "OOOfromCharCodeOOO"
+ 
+   # String prototype
+-  - str: "constructor"
+-  - str: "toString"
+-  - str: "valueOf"
+-  - str: "charAt"
+-  - str: "charCodeAt"
+-  - str: "concat"
+-  - str: "indexOf"
+-  - str: "lastIndexOf"
+-  - str: "localeCompare"
+-  - str: "match"
+-  - str: "replace"
+-  - str: "search"
+-  - str: "slice"
+-  - str: "split"
+-  - str: "substring"
+-  - str: "toLowerCase"
+-  - str: "toLocaleLowerCase"
+-  - str: "toUpperCase"
+-  - str: "toLocaleUpperCase"
+-  - str: "trim"
+-  - str: "substr"
++  - str: "OOOconstructorOOO"
++  - str: "OOOtoStringOOO"
++  - str: "OOOvalueOfOOO"
++  - str: "OOOcharAtOOO"
++  - str: "OOOcharCodeAtOOO"
++  - str: "OOOconcatOOO"
++  - str: "OOOindexOfOOO"
++  - str: "OOOlastIndexOfOOO"
++  - str: "OOOlocaleCompareOOO"
++  - str: "OOOmatchOOO"
++  - str: "OOOreplaceOOO"
++  - str: "OOOsearchOOO"
++  - str: "OOOsliceOOO"
++  - str: "OOOsplitOOO"
++  - str: "OOOsubstringOOO"
++  - str: "OOOtoLowerCaseOOO"
++  - str: "OOOtoLocaleLowerCaseOOO"
++  - str: "OOOtoUpperCaseOOO"
++  - str: "OOOtoLocaleUpperCaseOOO"
++  - str: "OOOtrimOOO"
++  - str: "OOOsubstrOOO"
+     section_b: true
+ 
+   # String instances
+@@ -504,7 +504,7 @@
+   # --- Node.js Buffer / TypedArray related strings ---
+ 
+   # Node.js class
+-  - str: "Buffer"
++  - str: "OOOBufferOOO"
+     class_name: true
+     nodejs_buffer: true
+ 
+@@ -617,37 +617,37 @@
+     nodejs_buffer: true
+ 
+   # TypedArray classes
+-  - str: "ArrayBuffer"
++  - str: "OOOArrayBufferOOO"
+     class_name: true
+     typed_array: true
+   - str: "DataView"
+     class_name: true
+     typed_array: true
+-  - str: "Int8Array"
++  - str: "OOOInt8ArrayOOO"
+     class_name: true
+     typed_array: true
+-  - str: "Uint8Array"
++  - str: "OOOUint8ArrayOOO"
+     class_name: true
+     typed_array: true
+   - str: "Uint8ClampedArray"
+     class_name: true
+     typed_array: true
+-  - str: "Int16Array"
++  - str: "OOOInt16ArrayOOO"
+     class_name: true
+     typed_array: true
+-  - str: "Uint16Array"
++  - str: "OOOUint16ArrayOOO"
+     class_name: true
+     typed_array: true
+-  - str: "Int32Array"
++  - str: "OOOInt32ArrayOOO"
+     class_name: true
+     typed_array: true
+-  - str: "Uint32Array"
++  - str: "OOOUint32ArrayOOO"
+     class_name: true
+     typed_array: true
+-  - str: "Float32Array"
++  - str: "OOOFloat32ArrayOOO"
+     class_name: true
+     typed_array: true
+-  - str: "Float64Array"
++  - str: "OOOFloat64ArrayOOO"
+     class_name: true
+     typed_array: true
+ 

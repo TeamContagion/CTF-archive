@@ -1,0 +1,15 @@
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/f1b69d1d5c8e874ffae9ce29d39435eda78ce7ae44428c88ff29cb368f8fead6/redacted-puzzle.gif
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/009169be1eaf1e6c16db9349188a5d580f72ecf297300f08d558dc2b43ef1fdb/challenge.py
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/5e1bb5854246f0da350688bd22f1137fdc2061dc2c92aabbe625458158e59620/tania
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/134580603e2e148a58820e3d7e9d35197d325c5558df65cdd2e3333535cfecc3/shitorrent
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/134580603e2e148a58820e3d7e9d35197d325c5558df65cdd2e3333535cfecc3/shitorrent.cc
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/4df053d71ee07dee43349db31a2a862614ff68d46a8fa1455b4ab3ef39f97186/hotel_california
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/c72924d31324d0471be71a2fd5b2237eb78a5de9304194667b0468883bd84574/crux_7377a1f43e35924971ef1b172c080e03131bed56
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/a40335332c458447683e874477efdc4fa4d1f7a81ac300dfc6b60ca56ada0806/election_coin
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/e842e446bc7b7601919b320281cf7a9f6208563d95a68b0083275160a62c31cb/service
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/b48fb18a0837e8e6840d5101ff44bb9ee5ee1d22846580487ccce756b966f6b2/info.pac
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/23d476e98b3770fbd2d6bddcd794605640c1994a47e698fa163729669f63ae19/ooo.defcon2019.quals.veryandroidoso.apk
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/a9a155e29252d166457c507021a8b85fbcfbb6c55816a04ec9656d042dba5afc/gloryhost
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/4cca7c545014235e740655a486142f3e93137c92e36d9c157f4a4397e6385ffb/Dockerfile
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/4cca7c545014235e740655a486142f3e93137c92e36d9c157f4a4397e6385ffb/headerquery
+https://s3.us-east-2.amazonaws.com/oooverflow-challs/4cca7c545014235e740655a486142f3e93137c92e36d9c157f4a4397e6385ffb/pitas.py
